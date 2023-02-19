@@ -1,0 +1,119 @@
+.about {
+  @include flex-all-sb;
+
+  &__inner {
+    width: 100%;
+    max-width: 540px;
+  }
+
+  &__box {
+    // position: relative;
+    // mask-image: url("../img/sprite.svg#ellipse");
+    // mask-position: center;
+    // mask-repeat: no-repeat;
+    // mask-size: cover;
+    // background-color: var(--color-red);
+    // z-index: -1;
+    // width: 408px;
+    // height: 413px;
+    // background-clip: content-box;
+  }
+
+  &__box {
+    position: relative;
+    isolation: isolate;
+    z-index: 2;
+
+    &::before {
+      content: "";
+      position: absolute;
+      mask-image: url("../img/sprite.svg#ellipse");
+      mask-position: center;
+      mask-repeat: no-repeat;
+      mask-size: cover;
+      background-color: var(--color-red);
+      z-index: -1;
+      inset: 0;
+      width: 408px;
+      height: 413px;
+    }
+  }
+
+  &__img {
+    position: relative;
+    top: -45px;
+    left: 60px;
+  }
+
+  &__icon {
+    position: absolute;
+    top: 45%;
+    left: 2%;
+    width: 106px;
+    height: 32px;
+    stroke: var(--color-white);
+    animation: wave 1200ms infinite;
+
+    &--ellipse {
+      top: 10%;
+      left: 8%;
+      width: 80px;
+      height: 80px;
+    }
+  }
+
+  // @keyframes wave {
+
+  //   0% {
+  //     transform: translateX(0);
+  //   }
+
+  //   50% {
+  //     transform: translateX(-50%);
+  //   }
+
+  //   100% {
+  //     transform: translateX(-80%);
+  //   }
+  // }
+
+  &__list {
+    display: grid;
+    gap: 30px;
+
+    li {
+      position: relative;
+      isolation: isolate;
+
+      &::before {
+        @include flex-all-center;
+
+        content: url(../img/svg/trenager.svg);
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        background-color: var(--color-pink);
+        border-radius: 50%;
+        // // padding-top: 8px;
+        // padding: 9px;
+        left: -65px;
+      }
+
+      &:last-child::before {
+        content: url(../img/svg/ball.svg);
+      }
+
+      h3 {
+        @include h3;
+      }
+
+      p {
+        width: 100%;
+        max-width: 340px;
+        font-size: 14px;
+        line-height: 1.7;
+      }
+    }
+  }
+
+}

@@ -1,0 +1,26 @@
+.shopping {
+  position: relative;
+
+  &__text {
+    margin-bottom: rem(30);
+    text-align: center;
+  }
+
+  &__wrapper {
+    width: 100%;
+    max-width: 1560px;
+  }
+}
+
+.shopping-slider {
+  position: relative;
+  overflow: hidden;
+
+  &__prev {
+    left: -1%;
+  }
+
+  &__next {
+    right: 6%;
+  }
+}

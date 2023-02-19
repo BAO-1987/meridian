@@ -1,0 +1,34 @@
+.hero {
+  @include bg-cover;
+
+  @include flex-a-center;
+
+  position: relative;
+  z-index: 1;
+  isolation: isolate;
+  min-height: 852px;
+
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+    inset: 0;
+  }
+
+  &__inner {
+    padding-left: clamp(25px, 5rem, 90px);
+    width: 100%;
+    max-width: 990px;
+    color: var(--color-white);
+
+    p {
+      margin-bottom: rem(55);
+    }
+  }
+
+  &__title {
+    @include h1;
+  }
+}

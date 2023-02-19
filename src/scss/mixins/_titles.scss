@@ -1,0 +1,27 @@
+/* stylelint-disable-next-line at-rule-blacklist */
+@mixin h1 {
+  @include adaptive_size("font-size", 75, 35);
+  font-family: var(--font-title);
+  text-transform: uppercase;
+  margin-bottom: rem(20);
+  font-weight: 500;
+  line-height: 1.25;
+}
+
+@mixin h2 {
+  @include adaptive_size("font-size", 75, 25);
+
+  font-family: var(--font-title);
+  margin-bottom: rem(20);
+  font-weight: 500;
+  line-height: 1.25;
+  text-align: center;
+
+}
+
+@mixin h3 {
+  font-family: var(--font-title);
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 1.3;
+}
