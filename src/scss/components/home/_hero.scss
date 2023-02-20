@@ -19,16 +19,21 @@
 
   &__inner {
     padding-left: clamp(25px, 5rem, 90px);
-    width: 100%;
-    max-width: 990px;
+    // width: 100%;
+    // max-width: 970px;
     color: var(--color-white);
 
     p {
       margin-bottom: rem(55);
+      width: 100%;
+      max-width: 860px;
     }
   }
 
   &__title {
     @include h1;
+
+    width: 100%;
+    max-width: 970px;
   }
 }

@@ -2,7 +2,8 @@
   min-height: 100vh;
   font-family: var(--font-family);
   font-weight: 400;
-  @include adaptive_size("font-size", 25, 20);
+  // @include adaptive_size("font-size", 25, 20);
+  font-size: clamp(1rem, calc(0.89rem + 0.56vw), 1.56rem);
   line-height: 1.7;
   color: var(--color-black);
   background-color: var(--color-white);
@@ -29,6 +30,8 @@
 
 .title {
   @include h2;
+
+  
 
   &--article {
     @include flex;
